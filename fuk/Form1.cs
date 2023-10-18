@@ -158,20 +158,48 @@ namespace fuk
 
         private void rjButton13_Click(object sender, EventArgs e)
         {
-
+            rjButton12.Visible = false;
+            rjButton13.Visible = false;
+            rjButton14.Visible = false;
+            rjButton15.Visible = false;
         }
 
         private void rjButton14_Click(object sender, EventArgs e)
         {
-
+            rjButton12.Visible = false;
+            rjButton13.Visible = false;
+            rjButton14.Visible = false;
+            rjButton15.Visible = false;
         }
 
-        private void rjButton15_Click(object sender, EventArgs e)
+        private async void rjButton15_Click(object sender, EventArgs e)
+        {
+            rjButton12.Visible = false;
+            rjButton13.Visible = false;
+            rjButton14.Visible = false;
+            rjButton15.Visible = false;
+
+            pictureBox8.Visible = true;
+            textBox6.Visible = true;
+            textBox6.Text = "Hub 5";
+
+            await Task.Delay(1000);
+            pictureBox9.Visible = true;
+            textBox7.Visible = true;
+            textBox7.Text = "Please select one of the following";
+
+            await Task.Delay(500);
+
+            rjButton16.Visible = true;
+            rjButton1.Visible = true;
+        }
+
+        private void panel2_Paint(object sender, PaintEventArgs e)
         {
 
         }
 
-        private void panel2_Paint(object sender, PaintEventArgs e)
+        private void textBox5_TextChanged(object sender, EventArgs e)
         {
 
         }

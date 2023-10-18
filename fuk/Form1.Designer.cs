@@ -58,7 +58,12 @@
             rjButton14 = new RJButton();
             rjButton15 = new RJButton();
             panel2 = new Panel();
-            vScrollBar1 = new VScrollBar();
+            textBox7 = new TextBox();
+            pictureBox9 = new PictureBox();
+            textBox6 = new TextBox();
+            pictureBox8 = new PictureBox();
+            rjButton1 = new RJButton();
+            rjButton16 = new RJButton();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -68,6 +73,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox6).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox7).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).BeginInit();
             SuspendLayout();
             // 
             // panel1
@@ -174,7 +181,7 @@
             rjButton4.FlatStyle = FlatStyle.Flat;
             rjButton4.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
             rjButton4.ForeColor = Color.Red;
-            rjButton4.Location = new Point(154, 163);
+            rjButton4.Location = new Point(147, 163);
             rjButton4.Name = "rjButton4";
             rjButton4.Size = new Size(114, 40);
             rjButton4.TabIndex = 6;
@@ -220,7 +227,7 @@
             pictureBox4.BackgroundImage = (Image)resources.GetObject("pictureBox4.BackgroundImage");
             pictureBox4.BackgroundImageLayout = ImageLayout.Stretch;
             pictureBox4.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox4.Location = new Point(218, 117);
+            pictureBox4.Location = new Point(225, 117);
             pictureBox4.Name = "pictureBox4";
             pictureBox4.Size = new Size(43, 37);
             pictureBox4.TabIndex = 9;
@@ -229,7 +236,7 @@
             // 
             // textBox2
             // 
-            textBox2.Location = new Point(29, 139);
+            textBox2.Location = new Point(36, 139);
             textBox2.Multiline = true;
             textBox2.Name = "textBox2";
             textBox2.ReadOnly = true;
@@ -393,6 +400,7 @@
             textBox5.Size = new Size(183, 64);
             textBox5.TabIndex = 21;
             textBox5.Visible = false;
+            textBox5.TextChanged += textBox5_TextChanged;
             // 
             // rjButton12
             // 
@@ -466,7 +474,12 @@
             // 
             panel2.AutoScroll = true;
             panel2.BackColor = Color.Red;
-            panel2.Controls.Add(vScrollBar1);
+            panel2.Controls.Add(rjButton1);
+            panel2.Controls.Add(textBox7);
+            panel2.Controls.Add(pictureBox9);
+            panel2.Controls.Add(textBox6);
+            panel2.Controls.Add(rjButton16);
+            panel2.Controls.Add(pictureBox8);
             panel2.Controls.Add(rjButton15);
             panel2.Controls.Add(rjButton14);
             panel2.Controls.Add(textBox4);
@@ -496,12 +509,85 @@
             panel2.TabIndex = 26;
             panel2.Paint += panel2_Paint;
             // 
-            // vScrollBar1
+            // textBox7
             // 
-            vScrollBar1.Location = new Point(271, 0);
-            vScrollBar1.Name = "vScrollBar1";
-            vScrollBar1.Size = new Size(22, 579);
-            vScrollBar1.TabIndex = 27;
+            textBox7.Location = new Point(61, 571);
+            textBox7.Multiline = true;
+            textBox7.Name = "textBox7";
+            textBox7.ReadOnly = true;
+            textBox7.Size = new Size(183, 64);
+            textBox7.TabIndex = 31;
+            textBox7.Visible = false;
+            // 
+            // pictureBox9
+            // 
+            pictureBox9.BackColor = Color.Red;
+            pictureBox9.BackgroundImage = (Image)resources.GetObject("pictureBox9.BackgroundImage");
+            pictureBox9.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox9.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox9.Enabled = false;
+            pictureBox9.Location = new Point(12, 562);
+            pictureBox9.Name = "pictureBox9";
+            pictureBox9.Size = new Size(43, 37);
+            pictureBox9.TabIndex = 30;
+            pictureBox9.TabStop = false;
+            pictureBox9.Visible = false;
+            // 
+            // textBox6
+            // 
+            textBox6.Location = new Point(36, 479);
+            textBox6.Multiline = true;
+            textBox6.Name = "textBox6";
+            textBox6.ReadOnly = true;
+            textBox6.Size = new Size(183, 64);
+            textBox6.TabIndex = 29;
+            textBox6.Visible = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Red;
+            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox8.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox8.Enabled = false;
+            pictureBox8.Location = new Point(225, 461);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(43, 37);
+            pictureBox8.TabIndex = 28;
+            pictureBox8.TabStop = false;
+            pictureBox8.Visible = false;
+            // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.GhostWhite;
+            rjButton1.Cursor = Cursors.Hand;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.Red;
+            rjButton1.Location = new Point(27, 643);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(121, 68);
+            rjButton1.TabIndex = 33;
+            rjButton1.Text = "Change WiFi network name/pass";
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Visible = false;
+            // 
+            // rjButton16
+            // 
+            rjButton16.BackColor = Color.GhostWhite;
+            rjButton16.Cursor = Cursors.Hand;
+            rjButton16.FlatAppearance.BorderSize = 0;
+            rjButton16.FlatStyle = FlatStyle.Flat;
+            rjButton16.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton16.ForeColor = Color.Red;
+            rjButton16.Location = new Point(154, 643);
+            rjButton16.Name = "rjButton16";
+            rjButton16.Size = new Size(114, 68);
+            rjButton16.TabIndex = 32;
+            rjButton16.Text = "Change Hub's settings password\r\n";
+            rjButton16.UseVisualStyleBackColor = false;
+            rjButton16.Visible = false;
             // 
             // Form1
             // 
@@ -524,6 +610,8 @@
             ((System.ComponentModel.ISupportInitialize)pictureBox7).EndInit();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pictureBox9).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox8).EndInit();
             ResumeLayout(false);
         }
 
@@ -557,6 +645,11 @@
         private RJButton rjButton14;
         private RJButton rjButton15;
         private Panel panel2;
-        private VScrollBar vScrollBar1;
+        private TextBox textBox6;
+        private PictureBox pictureBox8;
+        private TextBox textBox7;
+        private PictureBox pictureBox9;
+        private RJButton rjButton1;
+        private RJButton rjButton16;
     }
 }
