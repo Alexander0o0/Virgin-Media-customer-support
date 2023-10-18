@@ -58,12 +58,12 @@
             rjButton14 = new RJButton();
             rjButton15 = new RJButton();
             panel2 = new Panel();
+            rjButton1 = new RJButton();
             textBox7 = new TextBox();
             pictureBox9 = new PictureBox();
             textBox6 = new TextBox();
-            pictureBox8 = new PictureBox();
-            rjButton1 = new RJButton();
             rjButton16 = new RJButton();
+            pictureBox8 = new PictureBox();
             panel1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
@@ -124,6 +124,7 @@
             rjButton2.TabIndex = 2;
             rjButton2.Text = "New Chat Here";
             rjButton2.UseVisualStyleBackColor = false;
+            rjButton2.Click += rjButton2_Click;
             // 
             // pictureBox2
             // 
@@ -509,6 +510,22 @@
             panel2.TabIndex = 26;
             panel2.Paint += panel2_Paint;
             // 
+            // rjButton1
+            // 
+            rjButton1.BackColor = Color.GhostWhite;
+            rjButton1.Cursor = Cursors.Hand;
+            rjButton1.FlatAppearance.BorderSize = 0;
+            rjButton1.FlatStyle = FlatStyle.Flat;
+            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
+            rjButton1.ForeColor = Color.Red;
+            rjButton1.Location = new Point(27, 643);
+            rjButton1.Name = "rjButton1";
+            rjButton1.Size = new Size(121, 68);
+            rjButton1.TabIndex = 33;
+            rjButton1.Text = "Change WiFi network name/pass";
+            rjButton1.UseVisualStyleBackColor = false;
+            rjButton1.Visible = false;
+            // 
             // textBox7
             // 
             textBox7.Location = new Point(61, 571);
@@ -543,36 +560,6 @@
             textBox6.TabIndex = 29;
             textBox6.Visible = false;
             // 
-            // pictureBox8
-            // 
-            pictureBox8.BackColor = Color.Red;
-            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
-            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
-            pictureBox8.BorderStyle = BorderStyle.FixedSingle;
-            pictureBox8.Enabled = false;
-            pictureBox8.Location = new Point(225, 461);
-            pictureBox8.Name = "pictureBox8";
-            pictureBox8.Size = new Size(43, 37);
-            pictureBox8.TabIndex = 28;
-            pictureBox8.TabStop = false;
-            pictureBox8.Visible = false;
-            // 
-            // rjButton1
-            // 
-            rjButton1.BackColor = Color.GhostWhite;
-            rjButton1.Cursor = Cursors.Hand;
-            rjButton1.FlatAppearance.BorderSize = 0;
-            rjButton1.FlatStyle = FlatStyle.Flat;
-            rjButton1.Font = new Font("Segoe UI", 9F, FontStyle.Bold, GraphicsUnit.Point);
-            rjButton1.ForeColor = Color.Red;
-            rjButton1.Location = new Point(27, 643);
-            rjButton1.Name = "rjButton1";
-            rjButton1.Size = new Size(121, 68);
-            rjButton1.TabIndex = 33;
-            rjButton1.Text = "Change WiFi network name/pass";
-            rjButton1.UseVisualStyleBackColor = false;
-            rjButton1.Visible = false;
-            // 
             // rjButton16
             // 
             rjButton16.BackColor = Color.GhostWhite;
@@ -588,6 +575,20 @@
             rjButton16.Text = "Change Hub's settings password\r\n";
             rjButton16.UseVisualStyleBackColor = false;
             rjButton16.Visible = false;
+            // 
+            // pictureBox8
+            // 
+            pictureBox8.BackColor = Color.Red;
+            pictureBox8.BackgroundImage = (Image)resources.GetObject("pictureBox8.BackgroundImage");
+            pictureBox8.BackgroundImageLayout = ImageLayout.Stretch;
+            pictureBox8.BorderStyle = BorderStyle.FixedSingle;
+            pictureBox8.Enabled = false;
+            pictureBox8.Location = new Point(225, 461);
+            pictureBox8.Name = "pictureBox8";
+            pictureBox8.Size = new Size(43, 37);
+            pictureBox8.TabIndex = 28;
+            pictureBox8.TabStop = false;
+            pictureBox8.Visible = false;
             // 
             // Form1
             // 
